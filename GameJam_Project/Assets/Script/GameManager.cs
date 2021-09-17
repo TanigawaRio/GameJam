@@ -31,9 +31,8 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(NextScene);
     }
 
-    public void Rotation(string RotateObject)
+    public void Rotation(GameObject RotateObject)
     {
-        transform.Rotate(0, 0, 90);
-
+        RotateObject.GetComponent<SmartPhone>().flag = true;
     }
 }
