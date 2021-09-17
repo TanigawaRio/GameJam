@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 7e6d53cf26c17204fa4e7f431ab63071
+  - enabled: 1
+    path: Assets/Scenes/CallApp.unity
+    guid: 1f070d2f29fedef459e76e25e1391e25
+  - enabled: 1
+    path: Assets/Scenes/MailApp.unity
+    guid: 661a2c1ac7cf87c409916b69637c5ab2
   m_configObjects: {}
