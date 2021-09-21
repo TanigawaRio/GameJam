@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WeatherApp.unity
     guid: 94d9deffecf58f64593e117396d5d286
+  - enabled: 1
+    path: Assets/Scenes/TwitterApp.unity
+    guid: 25fdd12ec84745444905962b58e9fc13
   m_configObjects: {}
