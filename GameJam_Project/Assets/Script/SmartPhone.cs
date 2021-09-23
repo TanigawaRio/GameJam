@@ -32,6 +32,7 @@ public class SmartPhone : MonoBehaviour
 
                 RotationFlag = false;
             }
+     
         }
         else
         {
