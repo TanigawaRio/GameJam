@@ -6,32 +6,41 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public Text TimerText;
-    public float TotalTime;
-    int Seconds;
+    public GameObject OnLoad;
+
+    public static GameObject Singleton;
+
+    public void Awake()
+    {
+        if(SceneManager.GetActiveScene().name != "GameOver")
+        {
+            if (Singleton == null)
+            {
+                DontDestroyOnLoad(OnLoad);
+                Singleton = OnLoad;
+            }
+            else
+            {
+                Destroy(OnLoad);
+            }
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         Screen.SetResolution(1920, 1080, false);
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 120;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (TotalTime > 0)
-        {
-            TotalTime -= Time.deltaTime;
-            Seconds = (int)TotalTime;
-            TimerText.text = Seconds.ToString();
-        }
+        
     }
 
     public void ChangeScene(string NextScene)
     {
-        //DontDestroyOnLoad(TimerText.gameObject.transform.parent.gameObject);
-        //DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene(NextScene);
     }
 
