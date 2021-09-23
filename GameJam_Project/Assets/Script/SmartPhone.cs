@@ -5,11 +5,9 @@ using UnityEngine.UI;
 
 public class SmartPhone : MonoBehaviour
 {
-    public bool flag = false;
-
-    float time = 0;
-
-    float Speed = 20;
+    public bool RotationFlag = false;
+    float RotationTime = 0;
+    float RotationSpeed = 20;
 
     // Start is called before the first frame update
     void Start()
@@ -20,24 +18,24 @@ public class SmartPhone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (flag == true)
+        if (RotationFlag == true)
         {
-            transform.Rotate(0, 0, 1 * Time.deltaTime * Speed);
+            transform.Rotate(0, 0, 1 * Time.deltaTime * RotationSpeed);
 
-            time += 1 * Time.deltaTime * Speed;
+            RotationTime += 1 * Time.deltaTime * RotationSpeed;
 
             Quaternion quaternion = transform.rotation;
 
-            if(time > 90)
+            if(RotationTime > 90)
             {
                 transform.rotation = Quaternion.Euler(0, 0, (int)quaternion.eulerAngles.z);
 
-                flag = false;
+                RotationFlag = false;
             }
         }
         else
         {
-            time = 0;
+            RotationTime = 0;
         }
     }
 }

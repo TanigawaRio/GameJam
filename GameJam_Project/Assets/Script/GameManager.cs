@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public Text TimerText;
-
     public float TotalTime;
     int Seconds;
 
@@ -21,18 +20,23 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TotalTime -= Time.deltaTime;
-        Seconds = (int)TotalTime;
-        TimerText.text = Seconds.ToString();
+        if (TotalTime > 0)
+        {
+            TotalTime -= Time.deltaTime;
+            Seconds = (int)TotalTime;
+            TimerText.text = Seconds.ToString();
+        }
     }
 
     public void ChangeScene(string NextScene)
     {
+        //DontDestroyOnLoad(TimerText.gameObject.transform.parent.gameObject);
+        //DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene(NextScene);
     }
 
     public void Rotation(GameObject RotateObject)
     {
-        RotateObject.GetComponent<SmartPhone>().flag = true;
+        RotateObject.GetComponent<SmartPhone>().RotationFlag = true;
     }
 }
