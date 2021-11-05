@@ -5,6 +5,18 @@ using UnityEngine.UI;
 
 public class TextScript : MonoBehaviour
 {
+    private Queue<char> _charQueue;
+
+    private Queue<char> SeparateString(string str)
+    {
+        char[] chars = str.ToCharArray();
+        Queue<char> charQueue = new Queue<char>();
+        foreach (char c in chars) charQueue.Enqueue(c);
+        return charQueue;
+    }
+
+    
+
     [SerializeField]
     private Text mainText;
     [SerializeField]
