@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: GameJam_Project
+  productName: "643_\u5F7C\u304C\u6D6E\u6C17\u3057\u3066\u3044\u308B\u304B\u3082\u3057\u308C\u306A\u3044\u4EF6\u306B\u3064\u3044\u3066\u306A\u3093\u3060\u304C"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
